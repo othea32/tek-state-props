@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./Card";
+import Child from "./Child";
 
 function App() {
+
+  const data = [
+    {name:'lisa',age:30, job:'frontend-engineer'},
+    {name:'tim',age:40, job:'backend-engineer'},
+    {name:'john',age:50, job:'system-engineer'},
+  ];
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card data={data}/>
+      <Child />
     </div>
   );
-}
+};
 
 export default App;
